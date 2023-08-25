@@ -12,10 +12,6 @@ the 'tools' module is for small tools, like stuff you find on tinywow.com
 
 
 
-**Open source tools/repos & github hosted sitres you can start with:**
-
-- [ ] https://github.com/tanabe/markdown-live-preview
-- [ ] https://github.com/huggingface/blog/tree/main
 
 <br><br>
 
