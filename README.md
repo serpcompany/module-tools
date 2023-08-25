@@ -6,7 +6,9 @@ the 'tools' module is for small tools, like stuff you find on tinywow.com
 
 1. make the typical django url/view/template for a single page
 2. write the .js to accept the files and such via dropzone (prolly can reuse with includes)
-3. if requires python to run, put that python code in the views.py file and reference it from the <form> element and / or .js code
+3. if requires python to run, put that python code in the `views.py` file and reference it from the <form> element and / or .js code
+4. put the .js code in `tools/static/tools/js`
+
 
 
 
