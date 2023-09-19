@@ -1,6 +1,3 @@
-// script.js
-
-
 // XML File Scripts
 
 async function extractUrlsFromSitemap(sitemapUrl) {
