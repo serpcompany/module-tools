@@ -13,19 +13,16 @@ async function handleExtractUrlsGetSitemapUrlsFromUrl() {
 
 async function getUrlsFromSitemap(sitemapUrl) {
     try {
+        // Fetch the sitemap content
         const response = await fetch(sitemapUrl);
-        const arrayBuffer = await response.arrayBuffer();
-        
-        // Decompress using pako
-        const decompressedData = pako.inflate(arrayBuffer, { to: 'string' });
-        
-        return extractUrlsFromXmlText(decompressedData);
+        const xmlText = await response.text();
+
+        return extractUrlsFromXmlText(xmlText);
     } catch (error) {
         console.error("Error fetching or parsing the sitemap:", error);
         return [];
     }
 }
-
 
 function extractUrlsFromXmlText(xmlText) {
     try {

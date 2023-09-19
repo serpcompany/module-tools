@@ -1,9 +1,10 @@
 // countParagraphs.js
 
 function countParagraphs(text) {
-    const paragraphs = text.split('\n\n');
+    const paragraphs = text.match(/(^|\n\n)[^\n]+/g) || [];
     return paragraphs.length;
 }
+
 
 // handler
 function handleButtonClickCountParagraphs() {

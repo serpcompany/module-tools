@@ -15,12 +15,5 @@ function handleButtonClickCountCharactersNoWhitespace() {
 // event listener
 document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById('button-count-characters-no-whitespace');
-    btn.addEventListener('click', handleButtonClickCountCharactersNoWhitespace)
-})
-
-
-// event listener
-document.addEventListener("DOMContentLoaded", function() {
-    const btn = document.getElementById('button-count-characters-no-whitespace');
     btn.addEventListener('click', handleButtonClickCountCharactersNoWhitespace);
-});
+})
