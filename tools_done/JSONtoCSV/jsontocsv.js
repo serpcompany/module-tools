@@ -1,9 +1,12 @@
-function convertJSONtoCSV() {
-    // Get reference to the ldBar progress bar
-    let progressBar = document.querySelector(".ldBar");
-    progressBar.setAttribute("data-value", "50");  // Set progress to 50% initially
+document.addEventListener("DOMContentLoaded", (event) => {
+    document.getElementById("convertJSONtoCSVbutton").addEventListener("click", convertJSONtoCSV);
+    document.getElementById("downloadJSONtoCSV").addEventListener("click", downloadCSV);
+});
 
-    // Introduce a brief delay to simulate processing
+function convertJSONtoCSV() {
+    let progressBar = document.querySelector(".ldBar");
+    progressBar.setAttribute("data-value", "50");
+
     setTimeout(() => {
         let jsonInput = document.getElementById("jsonInput").value;
         let parsedJson;
@@ -12,25 +15,19 @@ function convertJSONtoCSV() {
             parsedJson = JSON.parse(jsonInput);
         } catch (error) {
             alert("Invalid JSON format.");
-            progressBar.setAttribute("data-value", "0");  // Reset progress to 0%
+            progressBar.setAttribute("data-value", "0");
             return;
         }
 
-        // Convert JSON to CSV using PapaParse
         let csv = Papa.unparse(parsedJson);
-
-        // Display the CSV in the output textarea
         document.getElementById("csvOutput").value = csv;
-
-        // Indicate completion by setting progress to 100%
         progressBar.setAttribute("data-value", "100");
-    }, 500);  // 500 milliseconds (0.5 seconds) delay
+    }, 500);
 }
 
 function downloadCSV() {
     let csvContent = document.getElementById("csvOutput").value;
-    
-    // Check if the CSV content is empty
+
     if (!csvContent) {
         alert("Please convert the JSON to CSV first.");
         return;
@@ -41,13 +38,9 @@ function downloadCSV() {
 
     let url = URL.createObjectURL(blob);
     downloadLink.href = url;
-    downloadLink.download = "data.csv"; // You can rename the file if needed
+    downloadLink.download = "data.csv";
 
-    document.body.appendChild(downloadLink); // Required for Firefox
+    document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
 }
-
-document.addEventListener("DOMContentLoaded", (event) => {
-    let bar = new ldBar(".ldBar");
-});
