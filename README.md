@@ -1,20 +1,15 @@
 # README
 
-the 'tools' module is for small tools, like stuff you find on tinywow.com
+## Overview
 
-## Process
+The 'tools' module is for small tools, like stuff you find on tinywow.com.
+
+Note: at first we are going to try and make as many of these as we can with utilizing all the processing on the CLIENT SIDE ONLY. Aka - try to make it run all in the persons browser so we dont need to use our server resources.
+
+## Process (draft)
 
 1. make the typical django url/view/template for a single page
 2. write the .js to accept the files and such via dropzone (prolly can reuse with includes)
-3. if requires python to run, put that python code in the `views.py` file and reference it from the <form> element and / or .js code
-4. put the .js code in `tools/static/tools/js`
 
+- [for the actual website project]: put the .js code in `tools/static/tools/js`
 
-
-
-
-<br><br>
-
-**Small tools websites (seo research sheet):**
-
-- https://docs.google.com/spreadsheets/d/1OQ2Hv66jd7rDAiGOG05Se9Eba5P3-uWYUVoY_NOczkg/edit#gid=0
