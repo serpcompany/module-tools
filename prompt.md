@@ -5,9 +5,11 @@ External .js libraries are okay to use if needed for logic.
 
 ## Structure
 
+```
 folder/
  |_ index.html
  |_ script.js
+```
 
 ## Features
 
@@ -15,3 +17,7 @@ folder/
 - a start button
 - a progress indicator while its running
 - a download button that will download the finished product
+
+## Index.html
+
+
