@@ -1,10 +1,10 @@
-{% extends 'website/base.html' %} {% load static %}
+ 'website/base.html  stati
 
-{% block extra_css %}
-{% endblock extra_css %}
+ extra_cs
+ extra_cs
 
 
-{% block content %}
+ conten
 
 <section id="_combineCSV" >
     
@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-12 mb-4 d-block dropzone border-dashed min-h-0 rounded-2 py-15">
                     <form class="" method="post" enctype="multipart/form-data" id="csv-combiner-form">
-                        {% csrf_token %}
+                        
                         <input name="files" type="file" multiple id="inputFiles" />
                     </form>
                 </div>
@@ -35,13 +35,13 @@
         </div>
     </section>
 </section>
-{% endblock %}
 
 
-{% block body_scripts %}
-<script src="papaparse.min.js" defer></script>
-<script src="combinecsv.js" defer></script>
-<script src="xlsx.full.min.js" defer></script>
-{% comment %} script src="{% static 'website/libs/file-upload-with-preview/dist/file-upload-with-preview.iife.js' %}" defer></script> {% endcomment %}
-{% comment %} <script src="{% static 'website/libs/dropzone/dist/dropzone.js' %}" defer></script> {% endcomment %}
-{% endblock body_scripts %}
+
+
+<script src="../../../js/tools/papaparse.min.js" defer></script>
+<script src="../../../js/tools/xlsx.full.min.js" defer></script>
+<script src="../../../js/tools/combinecsv.js" defer></script>
+ <script src="../../../libs/file-upload-with-preview/dist/file-upload-with-preview.iife.js" defer></script> 
+ <script src="../../../libs/dropzone/dist/dropzone.js" defer></script> 
+
