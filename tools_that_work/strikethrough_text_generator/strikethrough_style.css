@@ -1,0 +1,15 @@
+
+/* Custom CSS for the Strikethrough Text Generator Tool */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#_conversionSection {
+    margin-top: 30px;
+}
+
+#textInput, #strikethroughOutput {
+    height: 300px; /* Fixed height for textareas */
+    resize: none;  /* Disabling resizing */
+}
