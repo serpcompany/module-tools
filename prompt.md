@@ -1,6 +1,6 @@
 Look at the structure of my small tools webpage. 
 
-Using that same document structure, create a small tool that is a: <TYPE OF TOOL> -- <brief one sentence description of what it does>
+Using that same document structure, create a small tool that is a: `<TYPE OF TOOL>` -- `<brief one sentence description of what it does>`
 
 
 INSTRUCTIONS:
