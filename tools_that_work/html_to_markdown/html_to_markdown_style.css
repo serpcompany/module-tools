@@ -1,0 +1,15 @@
+
+/* Custom CSS for the HTML to Markdown Converter Tool */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#conversionSection {
+    margin-top: 30px;
+}
+
+#htmlInput, #markdownOutput {
+    height: 300px; /* Fixed height for textareas */
+    resize: none;  /* Disabling resizing */
+}
