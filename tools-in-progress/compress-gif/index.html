@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Compressor</title>
+    <script src="gif.js"></script>
+    <script src="gif.worker.js"></script>
+</head>
+
+<body>
+    <h1>GIF Compressor</h1>
+    <input type="file" id="fileInput" accept="image/gif">
+    <button id="compressButton" style="display:none;">Compress GIF</button>
+    <progress id="progressBar" value="0" max="100" style="display:none;"></progress>
+    <button id="downloadButton" style="display:none;">Download Compressed GIF</button>
+    <h2>Original GIF</h2>
+    <img id="originalImg" style="max-width: 100%; height: auto;" alt="Original GIF will appear here">
+    <h2>Compressed GIF</h2>
+    <img id="outputImg" style="max-width: 100%; height: auto;" alt="Compressed GIF will appear here">
+    <script src="compressor.js"></script>
+</body>
+
+</html>

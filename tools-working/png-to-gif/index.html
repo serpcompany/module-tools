@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG to GIF</title>
+</head>
+
+<body>
+    <h1>PNG to GIF Converter</h1>
+    <input type="file" id="fileInput" accept="image/png" multiple>
+    <button id="convertButton">Convert to GIF</button>
+    <img id="outputGif" alt="Resulting GIF will appear here">
+    <button id="downloadButton" style="display:none;">Download GIF</button>
+
+    <script src="gif.js"></script>
+    <script src="gif.worker.js"></script>
+    <script src="png_to_gif.js"></script>
+</body>
+
+</html>

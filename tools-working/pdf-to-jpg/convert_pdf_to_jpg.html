@@ -1,0 +1,38 @@
+{% extends 'website/base.html' %} {% load static %}
+
+{% block extra_css %}
+<!-- Additional CSS if needed -->
+{% endblock extra_css %}
+
+{% block content %}
+<section id="_convertPDF" >
+    <section id="Hero" class="py-7 py-lg-110 bg-gray-100">
+        <div class="container">
+            <div class="row mb-5 justify-content-center">
+                <div class="col-lg-8 col-md-12 col-12 text-center my-5">
+                    <h1 class="mb-2 display-4 fw-bold">Convert PDF to JPG</h1>
+                    <h2 class="lead">Transform your PDF files into JPG images.</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="_uploadSection">
+        <div id="_uploadArea" class="container">
+            <div class="row">
+                <div class="col-12 mb-4 d-block border-dashed min-h-0 rounded-2 py-15">
+                    <input name="pdf" type="file" id="upload" accept=".pdf" />
+                    <button class="btn btn-primary mt-3" onclick="processFile()">Convert</button>
+<button class="btn btn-secondary mt-3" id="downloadButton" disabled>Download</button>
+                    <img id="output" class="mt-4" />
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+{% endblock %}
+
+{% block body_scripts %}
+<script src="{% static 'website/js/tools/pdfjs/pdf.js' %}" defer></script>
+<script src="{% static 'website/js/tools/pdf_to_jpg.js' %}" defer></script>
+{% endblock body_scripts %}
